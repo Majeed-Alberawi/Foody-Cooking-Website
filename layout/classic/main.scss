@@ -1,0 +1,29 @@
+///   *                                                      *
+/// * * * Here All Main SCSS File To Run It In The Project * * *
+///   *                                                      *
+
+// ====== ROOT ====== //
+@use "./scss/base/root";
+
+// ====== FRAMWORK ====== //
+// -- MAIN STYLE
+@use "./scss/pages/main-style";
+
+// -- COLOR
+@use "./scss/abstracts/color";
+
+// -- TYPOGRAPHY
+@use "./scss/base/typography";
+
+// ====== COMPONENTS ====== //
+// -- HEADERS
+@use "./scss/components/headers";
+
+// -- BUTTONS
+@use "./scss/components/buttons";
+
+// -- GLOBAL RULES
+@use "./scss/components/global-rules";
+
+// ALL PAGES
+@use "scss/pages/all-pages";
