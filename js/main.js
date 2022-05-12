@@ -33,3 +33,10 @@ cardTypes.forEach((cardType) => {
   }
 });
 */
+
+// Nav Active //
+const bar = document.querySelector(".bar");
+
+bar.addEventListener("click", () => {
+  bar.classList.toggle("active");
+});
