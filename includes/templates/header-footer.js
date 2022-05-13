@@ -110,7 +110,7 @@ class myHeader extends HTMLElement {
         <div class="member-nav">
           <i class="fa-solid fa-caret-down"></i>
           <ul>
-            <li><a href="#">My accont</a></li>
+            <li><a href="member-page.html">My accont</a></li>
             <li><a href="#">My Blogs</a></li>
             <li>
               <a href="#"
