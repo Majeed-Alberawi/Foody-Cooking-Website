@@ -6,12 +6,12 @@ class myHeader extends HTMLElement {
     this.innerHTML = `
     <header>
     <div class="container">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <div class="image">
           <img src="./icons/top-logo.png" alt="" />
         </div>
         <h2>Foody</h2>
-      </div>
+      </a>
       <nav>
         <i class="fa-solid fa-bars bar"></i>
         <ul>
