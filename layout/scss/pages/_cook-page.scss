@@ -79,81 +79,101 @@
     grid-template-columns: 1fr 200px;
     padding: var(--section-padding) 0;
     .content {
-      display: flex;
-      justify-content: center;
-      .ingredients,
-      .directions {
-        width: 50%;
-        &-header {
-          display: flex;
-          align-items: center;
-          margin: 1rem 0;
-          .image {
-            margin: 0 0.5rem;
-            img {
-              width: 32px;
-            }
-          }
-        }
-        &-content {
-          ul {
-            margin: 0 4rem;
-            li {
-              margin: 0.5rem;
-              list-style: none;
-              position: relative;
-              &::before {
-                content: "";
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                background-color: var(--yellow);
-                left: -20px;
-                top: 4px;
+      .cooking-video {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+      }
+      .ingredients-contents {
+        display: flex;
+        justify-content: center;
+        padding-top: var(--section-padding);
+        .ingredients,
+        .directions {
+          width: 50%;
+          &-header {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            .image {
+              margin: 0 0.5rem;
+              img {
+                width: 32px;
               }
             }
           }
-          .to-serve {
-            margin: 0.5rem 0;
-            &-header {
-              margin: 1rem 0;
-              display: flex;
-              align-items: center;
-              .image {
-                margin: 0 0.5rem;
-                img {
-                  width: 32px;
+          &-content {
+            ul {
+              margin: 0 4rem;
+              li {
+                margin: 0.5rem;
+                list-style: none;
+                position: relative;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 10px;
+                  height: 10px;
+                  background-color: var(--yellow);
+                  left: -20px;
+                  top: 4px;
+                }
+              }
+            }
+            .to-serve {
+              margin: 0.5rem 0;
+              &-header {
+                margin: 1rem 0;
+                display: flex;
+                align-items: center;
+                .image {
+                  margin: 0 0.5rem;
+                  img {
+                    width: 32px;
+                  }
                 }
               }
             }
           }
         }
+        .directions-content {
+          counter-reset: section;
+          p {
+            position: relative;
+            margin: 0.5rem 4rem;
+            padding: 0.5rem;
+            &::before {
+              counter-increment: section;
+              content: counter(section);
+              position: absolute;
+              top: 0;
+              left: -25px;
+              font-size: 1.2rem;
+              font-weight: 600;
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              height: 100%;
+              width: 3px;
+              border-radius: 1rem;
+              top: 0;
+              left: -10px;
+              background-color: var(--green);
+            }
+          }
+        }
       }
-      .directions-content {
-        counter-reset: section;
-        p {
-          position: relative;
-          margin: 0.5rem 4rem;
-          padding: 0.5rem;
-          &::before {
-            counter-increment: section;
-            content: counter(section);
-            position: absolute;
-            top: 0;
-            left: -25px;
-            font-size: 1.2rem;
-            font-weight: 600;
-          }
-          &:after {
-            content: "";
-            position: absolute;
-            height: 100%;
-            width: 3px;
-            border-radius: 1rem;
-            top: 0;
-            left: -10px;
-            background-color: var(--green);
-          }
+    }
+    .other-cook {
+      @media (max-width: 991px) {
+        & {
+          padding-top: var(--section-padding);
+        }
+      }
+      .other-cook-header {
+        h3 {
+          font-family: "Aclonica", sans-serif;
         }
       }
     }

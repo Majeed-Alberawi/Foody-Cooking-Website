@@ -1690,20 +1690,30 @@ nav .nav-container .team p {
   grid-template-columns: 1fr 200px;
   padding: var(--section-padding) 0;
 }
-.container .content-container .content {
+.container .content-container .content .cooking-video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 1rem;
 }
-.container .content-container .content .ingredients,
-.container .content-container .content .directions {
+.container .content-container .content .ingredients-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: var(--section-padding);
+}
+.container .content-container .content .ingredients-contents .ingredients,
+.container .content-container .content .ingredients-contents .directions {
   width: 50%;
 }
-.container .content-container .content .ingredients-header,
-.container .content-container .content .directions-header {
+.container .content-container .content .ingredients-contents .ingredients-header,
+.container .content-container .content .ingredients-contents .directions-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1712,26 +1722,26 @@ nav .nav-container .team p {
           align-items: center;
   margin: 1rem 0;
 }
-.container .content-container .content .ingredients-header .image,
-.container .content-container .content .directions-header .image {
+.container .content-container .content .ingredients-contents .ingredients-header .image,
+.container .content-container .content .ingredients-contents .directions-header .image {
   margin: 0 0.5rem;
 }
-.container .content-container .content .ingredients-header .image img,
-.container .content-container .content .directions-header .image img {
+.container .content-container .content .ingredients-contents .ingredients-header .image img,
+.container .content-container .content .ingredients-contents .directions-header .image img {
   width: 32px;
 }
-.container .content-container .content .ingredients-content ul,
-.container .content-container .content .directions-content ul {
+.container .content-container .content .ingredients-contents .ingredients-content ul,
+.container .content-container .content .ingredients-contents .directions-content ul {
   margin: 0 4rem;
 }
-.container .content-container .content .ingredients-content ul li,
-.container .content-container .content .directions-content ul li {
+.container .content-container .content .ingredients-contents .ingredients-content ul li,
+.container .content-container .content .ingredients-contents .directions-content ul li {
   margin: 0.5rem;
   list-style: none;
   position: relative;
 }
-.container .content-container .content .ingredients-content ul li::before,
-.container .content-container .content .directions-content ul li::before {
+.container .content-container .content .ingredients-contents .ingredients-content ul li::before,
+.container .content-container .content .ingredients-contents .directions-content ul li::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -1740,12 +1750,12 @@ nav .nav-container .team p {
   left: -20px;
   top: 4px;
 }
-.container .content-container .content .ingredients-content .to-serve,
-.container .content-container .content .directions-content .to-serve {
+.container .content-container .content .ingredients-contents .ingredients-content .to-serve,
+.container .content-container .content .ingredients-contents .directions-content .to-serve {
   margin: 0.5rem 0;
 }
-.container .content-container .content .ingredients-content .to-serve-header,
-.container .content-container .content .directions-content .to-serve-header {
+.container .content-container .content .ingredients-contents .ingredients-content .to-serve-header,
+.container .content-container .content .ingredients-contents .directions-content .to-serve-header {
   margin: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1754,23 +1764,23 @@ nav .nav-container .team p {
       -ms-flex-align: center;
           align-items: center;
 }
-.container .content-container .content .ingredients-content .to-serve-header .image,
-.container .content-container .content .directions-content .to-serve-header .image {
+.container .content-container .content .ingredients-contents .ingredients-content .to-serve-header .image,
+.container .content-container .content .ingredients-contents .directions-content .to-serve-header .image {
   margin: 0 0.5rem;
 }
-.container .content-container .content .ingredients-content .to-serve-header .image img,
-.container .content-container .content .directions-content .to-serve-header .image img {
+.container .content-container .content .ingredients-contents .ingredients-content .to-serve-header .image img,
+.container .content-container .content .ingredients-contents .directions-content .to-serve-header .image img {
   width: 32px;
 }
-.container .content-container .content .directions-content {
+.container .content-container .content .ingredients-contents .directions-content {
   counter-reset: section;
 }
-.container .content-container .content .directions-content p {
+.container .content-container .content .ingredients-contents .directions-content p {
   position: relative;
   margin: 0.5rem 4rem;
   padding: 0.5rem;
 }
-.container .content-container .content .directions-content p::before {
+.container .content-container .content .ingredients-contents .directions-content p::before {
   counter-increment: section;
   content: counter(section);
   position: absolute;
@@ -1779,7 +1789,7 @@ nav .nav-container .team p {
   font-size: 1.2rem;
   font-weight: 600;
 }
-.container .content-container .content .directions-content p:after {
+.container .content-container .content .ingredients-contents .directions-content p:after {
   content: "";
   position: absolute;
   height: 100%;
@@ -1788,4 +1798,12 @@ nav .nav-container .team p {
   top: 0;
   left: -10px;
   background-color: var(--green);
+}
+@media (max-width: 991px) {
+  .container .content-container .other-cook {
+    padding-top: var(--section-padding);
+  }
+}
+.container .content-container .other-cook .other-cook-header h3 {
+  font-family: "Aclonica", sans-serif;
 }
